@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2712%27 fill=%27%237c5cff%27/%3E%3C/svg%3E" />
+<meta name="theme-color" content="#050507" />
+<title>Nova — AI Design Studio</title>
+<!-- render-blocking: page never paints unstyled, in dev or production -->
+<link rel="stylesheet" href="/src/style.css" />
+<style>html,body{background:#050507;color:#f2f0ff}</style>
+<meta name="description" content="Nova is an AI design and engineering studio building intelligent products that feel alive." />
+</head>
+<body class="is-locked">
+<canvas id="gl" aria-hidden="true"></canvas>
+<div id="flash" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
+<div class="cur" aria-hidden="true"><div class="cur-ring"><i></i></div><div class="cur-dot"></div></div>
+
+<div id="pre" role="status" aria-live="polite">
+  <div class="pre-top"><span class="mono">NOVA / STUDIO</span><span class="mono" id="pre-job">Preparing</span></div>
+  <div class="pre-num"><span id="pre-pct">000</span><small>%</small></div>
+  <div class="pre-bar"><i id="pre-fill"></i></div>
+</div>
+
+<header class="nav">
+  <a class="brand" href="#top" data-link>NOVA<sup>®</sup></a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#studio" data-nav="1" data-link>Studio</a>
+    <a href="#work" data-nav="2" data-link>Work</a>
+    <a href="#numbers" data-nav="3" data-link>Numbers</a>
+  </nav>
+  <a class="nav-cta" href="#contact" data-link>Let's talk</a>
+</header>
+
+<main id="top">
+  <!-- 0 · HERO -->
+  <section class="sec hero" data-cam="0" aria-label="Introduction">
+    <div class="hero-in">
+      <div class="label"><b>●</b> AI design &amp; engineering studio</div>
+      <h1 class="display h-hero" data-chars aria-label="Intelligence, sculpted.">
+        <span class="line" aria-hidden="true">Intelligence,</span>
+        <span class="line" aria-hidden="true">sculpted.</span>
+      </h1>
+      <p class="lead">We craft AI products, interfaces and real-time 3D experiences that move as smoothly as they think.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#work" data-link>See our work</a>
+        <a class="btn btn-ghost" href="#contact" data-link>Start a project</a>
+      </div>
+    </div>
+    <div class="scroll-hint mono"><span></span>Scroll to explore</div>
+  </section>
+
+  <!-- 1 · STATEMENT (pinned) -->
+  <section class="sec statement" id="studio" data-cam="1">
+    <div class="label"><b>01</b><span class="rule"></span>The studio</div>
+    <p class="big-statement" data-words>We design intelligent products that feel alive — interfaces that think, motion that breathes, and systems built to scale from day one.</p>
+  </section>
+
+  <!-- 2 · CAPABILITIES (pinned horizontal) -->
+  <section class="caps" id="work" data-cam="2">
+    <div class="caps-head">
+      <div class="label"><b>02</b><span class="rule"></span>Capabilities</div>
+      <h2 class="display h-sec reveal"><span class="line"><span>What we build.</span></span></h2>
+    </div>
+    <div class="caps-track">
+      <article class="card"><div class="glare"></div>
+        <span class="card-n mono">01</span>
+        <div><h3>AI Products</h3><p>Copilots, agents and LLM-powered apps that ship to production — not just demos.</p></div>
+        <ul class="tags mono"><li>Agents</li><li>RAG</li><li>Evals</li></ul>
+      </article>
+      <article class="card"><div class="glare"></div>
+        <span class="card-n mono">02</span>
+        <div><h3>Interfaces</h3><p>Design systems where motion is a first-class citizen, tuned to feel instant.</p></div>
+        <ul class="tags mono"><li>Product</li><li>Motion</li><li>Systems</li></ul>
+      </article>
+      <article class="card"><div class="glare"></div>
+        <span class="card-n mono">03</span>
+        <div><h3>3D &amp; WebGL</h3><p>Real-time worlds, product configurators and launch sites rendered at 60fps.</p></div>
+        <ul class="tags mono"><li>Three.js</li><li>Shaders</li><li>Launches</li></ul>
+      </article>
+      <article class="card"><div class="glare"></div>
+        <span class="card-n mono">04</span>
+        <div><h3>Platforms</h3><p>Secure, scalable backends and data pipelines engineered to grow with you.</p></div>
+        <ul class="tags mono"><li>APIs</li><li>Data</li><li>Cloud</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- 3 · NUMBERS -->
+  <section class="sec numbers" id="numbers" data-cam="3">
+    <div class="label"><b>03</b><span class="rule"></span>In numbers</div>
+    <h2 class="display h-sec reveal"><span class="line"><span>Built to</span></span><span class="line"><span>perform.</span></span></h2>
+    <div class="stats">
+      <div class="stat"><b><span data-count="140">0</span>+</b><span class="mono">Products launched</span></div>
+      <div class="stat"><b><span data-count="60">0</span></b><span class="mono">FPS motion standard</span></div>
+      <div class="stat"><b><span data-count="32">0</span></b><span class="mono">Countries served</span></div>
+      <div class="stat"><b><span data-count="98">0</span>%</b><span class="mono">Clients return</span></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-row"><div class="mq-in"><span>Design · Motion · Intelligence · 3D · Engineering · </span><span>Design · Motion · Intelligence · 3D · Engineering · </span></div></div>
+    <div class="mq-row outline"><div class="mq-in"><span>Think · Sculpt · Ship · Scale · Repeat · </span><span>Think · Sculpt · Ship · Scale · Repeat · </span></div></div>
+  </div>
+
+  <!-- 4 · CTA (white-out) -->
+  <section class="cta" id="contact" data-cam="4">
+    <div class="cta-in">
+      <div class="label"><b>04</b><span class="rule"></span>Start</div>
+      <h2 class="display h-cta">Let's build<br />what's next.</h2>
+      <div class="mag-zone"><a class="magnetic" href="mailto:hello@example.com"><span>Start a project →</span></a></div>
+      <footer class="foot mono">
+        <span>© 2026 Nova Studio — concept site</span>
+        <span><a href="#top" data-link>Back to top ↑</a></span>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
